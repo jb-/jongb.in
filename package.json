@@ -17,7 +17,5 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.12.4"
   },
-  "eslintIgnore": {
-    "**/node_modules/**"
-  }
+  "eslintIgnore": "**/node_modules/**"
 }
