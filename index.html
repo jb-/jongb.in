@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>이종빈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf8">
+  </head>
+  <body>
+    <div class="container">
+      <h1>이종빈</h1>
+      <h3>Jongbin JB Lee</h3>
+      <section class="contacts">
+        <a href="sms:821097881973">+82-10-9788-1973</a>
+        <a href="mailto:jongbin.jb.lee@gmail.com">jongbin.jb.lee@gmail.coms</a>
+      </section>
+    </div>
+  </body>
+  <style>
+    body {
+      padding: 10px;
+      margin: 50px auto;
+      max-width: 650px;
+      font-family: helvetica;
+    }
+  </style>
+  <script>
+    const onBeforeClosed = (e) => {
+      // 표준에 따라 기본 동작 방지
+      event.preventDefault();
+      // Chrome에서는 returnValue 설정이 필요함
+      event.returnValue = '';
+    }
+    window.addEventListener('beforeunload', onBeforeClosed, false);
+  </script>
+</html>
