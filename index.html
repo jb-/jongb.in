@@ -24,7 +24,10 @@
   </style>
   <script>
     const ua = navigator.userAgent.toLowerCase();
-    console.log(ua);
-    alert(ua);
+    const origin = location.href;
+    alert(origin);
+    if (ua.includes('android') && (ua.includes('kakao') || ua.includes('instagram'))) {
+      // location
+    }
   </script>
 </html>
