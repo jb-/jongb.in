@@ -27,7 +27,7 @@
     const origin = location.href;
     alert(origin);
     if (ua.includes('android') && (ua.includes('kakao') || ua.includes('instagram'))) {
-      // location
+      location.href = origin;
     }
   </script>
 </html>
