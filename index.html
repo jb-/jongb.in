@@ -27,7 +27,7 @@
     const origin = location.href;
     alert(origin);
     if (ua.includes('android') && (ua.includes('kakao') || ua.includes('instagram'))) {
-      location.href = origin;
+      location.href = `intent://${origin.split('https://')[1]}#Intent;scheme=https;package=com.android.chrome;end`;
     }
   </script>
 </html>
