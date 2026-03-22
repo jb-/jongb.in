@@ -1,33 +1,95 @@
-<html>
+<!DOCTYPE html>
+<html lang="ko">
   <head>
     <title>이종빈</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf8">
+    <meta charset="utf-8">
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        padding: 40px 20px;
+        margin: 0 auto;
+        max-width: 600px;
+        font-family: Helvetica, Arial, sans-serif;
+        color: #000;
+        line-height: 1.6;
+      }
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+      }
+      .subtitle {
+        color: #595959;
+        font-size: 0.95rem;
+        margin-top: 2px;
+      }
+      .role {
+        margin-top: 24px;
+        font-size: 0.95rem;
+      }
+      .role span {
+        color: #595959;
+      }
+      .links {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+        font-size: 0.95rem;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .links a::before {
+        content: "→ ";
+        color: #999;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #ddd;
+        margin: 32px 0;
+      }
+      .contact {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .contact a {
+        color: #595959;
+        font-size: 0.875rem;
+      }
+    </style>
   </head>
   <body>
-    <div class="container">
-      <h1>이종빈</h1>
-      <h3>Jongbin JB Lee</h3>
-      <section class="contacts">
-        <a href="sms:821097881973">+82-10-9788-1973</a>
-        <a href="mailto:jongbin.jb.lee@gmail.com">jongbin.jb.lee@gmail.coms</a>
-      </section>
+    <h1>이종빈</h1>
+    <p class="subtitle">Jongbin JB Lee</p>
+
+    <p class="role">Software Engineer<br><span>CTO @ CrashCompany</span></p>
+
+    <div class="links">
+      <a href="https://github.com/jb-">GitHub</a>
+      <a href="https://threads.net/@jongb.in">Threads</a>
+      <a href="https://www.linkedin.com/in/jongb-in/">LinkedIn</a>
     </div>
+
+    <hr>
+
+    <div class="contact">
+      <a href="mailto:jongbin.jb.lee@gmail.com">jongbin.jb.lee@gmail.com</a>
+      <a href="tel:+821097881973">+82-10-9788-1973</a>
+    </div>
+
+    <script>
+      const ua = navigator.userAgent.toLowerCase();
+      if (ua.includes('android') && (ua.includes('kakao') || ua.includes('instagram'))) {
+        const origin = location.href;
+        location.href = `intent://${origin.split('https://')[1]}#Intent;scheme=https;package=com.android.chrome;end`;
+      }
+    </script>
   </body>
-  <style>
-    body {
-      padding: 10px;
-      margin: 50px auto;
-      max-width: 650px;
-      font-family: helvetica;
-    }
-  </style>
-  <script>
-    const ua = navigator.userAgent.toLowerCase();
-    const origin = location.href;
-    alert(origin);
-    if (ua.includes('android') && (ua.includes('kakao') || ua.includes('instagram'))) {
-      location.href = `intent://${origin.split('https://')[1]}#Intent;scheme=https;package=com.android.chrome;end`;
-    }
-  </script>
 </html>
